@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+            margin-right: 0px;
+            float: left;
+        }
+
+        a:hover {
+            background-color: gray;
+        }
+
+        div {
+            background-color: #262a2b;
+            padding: 0px 0px 0px 0px;
+            overflow: hidden;
+        }
+
+        .active {
+            background-color: green;
+        }
+
+        .active:hover {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="" class="active link" onclick="event.preventDefault()">Home</a>
+        <a href="" class="link" onclick="event.preventDefault()">Contacts</a>
+        <a href="" class="link" onclick="event.preventDefault()">Blog</a>
+        <a href="" class="link" onclick="event.preventDefault()">About us</a>
+    </div>
+    <script>
+        links = document.getElementsByClassName("link");
+        for (i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", function () {
+                for (k = 0; k < links.length; k++) {
+                    links[k].classList.remove("active");
+                }
+                this.classList.add("active");
+                // console.log(";hjbqbfhqb")
+            });
+        }
+        // console.log(links.length);
+    </script>
+</body>
+
+</html>
